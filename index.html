@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
             </ul> 
             <span class="navbar-text">
-                <a data-toggle="modal" data-target = "#loginModal">
+                <a id="loginButton">
                     <span class="fa fa-sign-in"></span> Login
                 </a>
             </span> 
@@ -40,6 +40,52 @@
         </div>
     </nav>
 
+    <div id="reservationModal" class = "modal fade" role = "dialog">
+        <div class= "modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                </div>
+            
+
+                        <div class="form-group row" >
+                            <label for="reservation" class="col-12col-sm-2 col-md-2" style="margin-left:5px; color:black">Section</label>
+                            <div class="btn-group" data-toggle="buttons">
+                                
+                                <label class="btn btn-success active" style="background:green ;color:white">
+                                  <input type="radio" checked name="options" id="non-smoking" autocomplete="off"> Non-Smoking
+                                </label>
+                                <label class="btn btn-danger" style="background:red ;color:white">
+                                  <input type="radio" name="options" id="smoking" autocomplete="off" > Smoking
+                                </label>
+                              </div>
+                        </div> 
+
+                        <div class="form-group row">
+                            <label for="reservation" class="col-12col-sm-2 col-md-2" style="margin-left:5px; color:black">Date and Time </label>
+                            <div class="col-12 col-sm-5 col-md-4">
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+                            </div>
+                            <div class="col-12 col-sm-7 col-md-5">
+                                <input type="time" class="form-control" id="time" name="time" placeholder="Time">
+                            </div>
+                        </div>
+
+                      
+                        <div class="form-group row align-self-center" >
+                            <button type="button" class="btn btn-secondary btn-sm " data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Reserve</button>        
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    
     <div id="loginModal" class = "modal fade" role = "dialog">
         <div class= "modal-dialog modal-lg" role="content">
             <div class="modal-content">
@@ -94,79 +140,10 @@
                     class="img-fluid"
                     >
              
-                <a class="btn btn-sm" style="background:orange" role="button"
-                data-toggle="modal" data-target = "#reservationModal">Reserve Table</a>
+                <a class="btn btn-sm" id= "reserveButton" style="background:orange" role="button"
+                >Reserve Table</a>
 
-                <div id="reservationModal" class = "modal fade" role = "dialog">
-                    <div class= "modal-dialog modal-lg" role="content">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title" style="color:black">Reserve a Table</h4>
-                            <button type="button" class="close" data-dismiss="modal">
-                                &times;
-                            </button>
-                            </div>
-                            <div class="modal-body">
-                                <form class="formStyle">
-                                    <div class="form-group row">
-                                        <span style="margin-right: 10px">Number of Guests</span>
-                                        <div class="form-check form-check-inline"style="margin-left:20px">
-                                            <label class="form-check-input">
-                                              <input type="radio" name="reservation" id="1" autocomplete="off" checked> 1
-                                            </label>
-                                            <label class="form-check-input">
-                                              <input type="radio" name="reservation" id="2" autocomplete="off"> 2
-                                            </label>
-                                            <label class="form-check-input">
-                                              <input type="radio" name="reservation" id="3" autocomplete="off"> 3
-                                            </label>
-                                            <label class="form-check-input">
-                                                <input type="radio" name="reservation" id="4" autocomplete="off"> 4
-                                              </label>
-                                              <label class="form-check-input">
-                                                <input type="radio" name="reservation" id="5" autocomplete="off"> 5
-                                              </label>
-                                              <label class="form-check-input">
-                                                <input type="radio" name="reservation" id="6" autocomplete="off"> 6
-                                              </label>
-                                            </div>
-                                          </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="reservation" class="col-12col-sm-2 col-md-2" style="margin-left:5px; color:black">Section</label>
-                                        <div class="btn-group" data-toggle="buttons">
-                                            
-                                            <label class="btn btn-success active" style="background:green ;color:white">
-                                              <input type="radio" checked name="options" id="non-smoking" autocomplete="off"> Non-Smoking
-                                            </label>
-                                            <label class="btn btn-danger" style="background:red ;color:white">
-                                              <input type="radio" name="options" id="smoking" autocomplete="off" > Smoking
-                                            </label>
-                                          </div>
-                                    </div> 
-            
-                                    <div class="form-group row">
-                                        <label for="reservation" class="col-12col-sm-2 col-md-2" style="margin-left:5px; color:black">Date and Time </label>
-                                        <div class="col-12 col-sm-5 col-md-4">
-                                            <input type="date" class="form-control" id="date" name="date" placeholder="Date">
-                                        </div>
-                                        <div class="col-12 col-sm-7 col-md-5">
-                                            <input type="time" class="form-control" id="time" name="time" placeholder="Time">
-                                        </div>
-                                    </div>
-            
-                                  
-                                    <div class="form-group row align-self-center" >
-                                        <button type="button" class="btn btn-secondary btn-sm " data-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary btn-sm ml-1">Reserve</button>        
-                                    </div>
-            
-                                </form>
-            
-                            </div>
-                        </div>
-                    </div>
+        
                 </div>
 
               
@@ -339,6 +316,17 @@
  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
  <script>
     $(document).ready(function(){
+
+        $("#reserveButton").click(function(){
+            $('#reservationModal').modal('show')
+        })
+
+        $("#loginButton").click(function(){
+            $('#loginModal').modal('show')
+        })
+
+
+
         $("#mycarousel").carousel( { interval: 2000 } );
         $("#carouselButton").click(function(){
             if ($("#carouselButton").children("span").hasClass('fa-pause')) {
